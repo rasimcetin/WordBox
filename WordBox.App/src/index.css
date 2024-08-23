@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+
+  --back-ground-color: #0a0606;
+  --primary-color: #6ae704;
+  --primary-color-rgb: 94, 92, 226;
+  --primary-color-rgb-rgb: 94, 92, 226;
+}
+
+body {
+  background-color: var(--back-ground-color);
+}
