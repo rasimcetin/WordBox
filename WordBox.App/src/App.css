@@ -60,6 +60,17 @@
   width: 20%;
 }
 
+.container div button:hover {
+  cursor: pointer;
+}
+
+.container div button:active {
+  background-color: var(--primary-color);
+  color: var(--back-ground-color);
+  transform: scale(0.95);
+  transition: all 0.5s ease;
+}
+
 .container div button svg {
   fill: var(--primary-color);
   width: 1.5rem;

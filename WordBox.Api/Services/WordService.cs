@@ -51,13 +51,13 @@ public class WordService : IWordService
 
     public Task<Result<WordDto>> GetWord(Guid id)
     {
-        var wordDto = _context.Words
-            .Select(w => new WordDto(w.Id, w.LanguageId, w.Text))
-            .FirstOrDefault(w => w.id == id);
-        if (wordDto == null)
+        var word = _context.Words.Find(id);
+        if (word == null)
         {
             return Task.FromResult(Result<WordDto>.Failure("Word not found"));
-        } 
+        }
+
+        var wordDto = new WordDto(word.Id, word.LanguageId, word.Text);
         return Task.FromResult(Result<WordDto>.Success(wordDto));
     }
 
